@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:where(html) {
+    --radius-xs: 2px;
+    --radius-s: 4px;
+    --radius-m: 6px;
+    --radius-l: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 30px;
+    --radius-circle: 50%;
+    --radius-pill: 360px;
+    --shadow-light: 0px 2px 4px rgba(14, 30, 37, .12);
+    --shadow-heavy: -10px 10px 80px rgba(0, 0, 0, .1);
+    --shadow-hover: 0 4px 12px rgba(0, 0, 0, .25);
+    --shadow-deep: 0px 16px 24px rgba(0, 0, 0, .07), 0px 6px 30px rgba(0, 0, 0, .06), 0px 8px 10px rgba(0, 0, 0, .1);
+    --shadow-diagram: 0px 2px 8px 0px rgba(32, 54, 161, .2);
+    --shadow-text: 0px 0px 24px #1b205b;
+    --shadow-outline: 0px 0px 60px 0px #80abfa66;
+    --space-0: 0rem;
+    --space-3xs: clamp(.25rem, calc(.25rem + 0vw), .25rem);
+    --space-2xs: clamp(.5rem, calc(.5rem + 0vw), .5rem);
+    --space-xs: clamp(.75rem, calc(.75rem + 0vw), .75rem);
+    --space-s: clamp(1rem, calc(1rem + 0vw), 1rem);
+    --space-m: clamp(1.5rem, calc(1.5rem + 0vw), 1.5rem);
+    --space-l: clamp(2rem, calc(2rem + 0vw), 2rem);
+    --space-xl: clamp(3rem, calc(3rem + 0vw), 3rem);
+    --space-2xl: clamp(4rem, calc(4rem + 0vw), 4rem);
+    --space-3xl: clamp(6rem, calc(6rem + 0vw), 6rem);
+    --space-4xl: clamp(10rem, calc(10rem + 0vw), 10rem);
+    --space-2xl-3xs: clamp(.25rem, 5.875rem + -7.5vw, 4rem);
+    --font-system: system-ui, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen-Sans, Ubuntu, Cantarell, “Helvetica Neue”, Arial, sans-serif;
+    --font-primary: Mulish, var(--font-system);
+    --font-secondary: Pacaembu, var(--font-system);
+    --font-heading: var(--font-secondary);
+    --font-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    --font-weight-light: 300;
+    --font-weight-semilight: 350;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 680;
+    --font-weight-bold: 800;
+    --text-underline-offset: .125em;
+    --line-height: 1.5;
+    --line-height-heading: 1.2;
+    --line-height-none: 1;
+    --tracking-tight: -.02em;
+    --step--2: .8125rem;
+    --step--1: .875rem;
+    --step-0: 1rem;
+    --step-05: clamp(1rem, .9375rem + .25vw, 1.125rem);
+    --step-1: clamp(1.13rem, calc(1.03rem + .39vw), 1.32rem);
+    --step-2: clamp(1.27rem, calc(1.03rem + .95vw), 1.74rem);
+    --step-3: clamp(1.42rem, calc(.99rem + 1.75vw), 2.3rem);
+    --step-4: clamp(1.6rem, calc(.88rem + 2.87vw), 3.04rem);
+    --step-5: clamp(1.8rem, calc(.7rem + 4.41vw), 4.01rem);
+    --page-padding: clamp(var(--space-s), 5vw, var(--space-l));
+    --page-max-inline-size: 1200px;
+    --border-redius-1: 6px;
+}
+
+:root {
+    --card-title-size-tiny: 1.125rem;
+    --card-title-size-small: 1.5rem;
+    --card-title-size-medium: 1.75rem;
+    --card-title-size-large: 3rem;
+    --primary-text-color: #181A1c
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--step-0);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height);
+    color: var(--primary-text-color);
+}
+
+p {
+    font-family: var(--font-primary);
+    font-size: var(--step-0);
+    font-weight: 350;
+}
+
+h1 {
+    font-size: var(--step-5);
+}
+
+/* utility classes */
+
+.primary-button {
+    color: #014847;
+    background-color: #32e6e2;
+    padding: 7px 12px;
+    font-size: var(--step-0);
+    font-family: var(--font-secondary);
+    border-radius: var(--border-redius-1);
+}
+
+.secondry-button {
+    color: #ffffff;
+    padding: 7px 12px;
+    font-size: var(--step-0);
+    font-family: var(--font-secondary);
+    border-radius: var(--border-redius-1);
+    border: 0.5px solid #fff;
+
+}
