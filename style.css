@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@font-face {
+    font-family: 'Pacaembu';
+    src: url('Pacaembu-TrialNaipeFoundry/ttf/Pacaembu-Regular-Trial.ttf');
+}
+
 /* reset */
 * {
     margin: 0;
@@ -36,8 +41,8 @@
     --space-4xl: clamp(10rem, calc(10rem + 0vw), 10rem);
     --space-2xl-3xs: clamp(.25rem, 5.875rem + -7.5vw, 4rem);
     --font-system: system-ui, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen-Sans, Ubuntu, Cantarell, “Helvetica Neue”, Arial, sans-serif;
-    --font-primary: Mulish, var(--font-system);
-    --font-secondary: Pacaembu, var(--font-system);
+    --font-primary: 'Mulish', var(--font-system);
+    --font-secondary: 'Pacaembu', var(--font-system);
     --font-heading: var(--font-secondary);
     --font-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
     --font-weight-light: 300;
@@ -63,6 +68,7 @@
     --page-padding: clamp(var(--space-s), 5vw, var(--space-l));
     --page-max-inline-size: 1200px;
     --border-redius-1: 6px;
+    --border-redius-2: 5px;
 }
 
 :root {
@@ -99,6 +105,8 @@ ul {
 
 h1 {
     font-size: var(--step-5);
+    font-weight: var(--font-weight-bold);
+   
 }
 
 h2 {
@@ -107,9 +115,9 @@ h2 {
 
 /* utility classes */
 .container {
-    max-width: 1180px;
+    max-width: 1200px;
     margin-inline: auto;
-    padding-inline: var(--padding-inline-section);
+    /* padding-inline: var(--padding-inline-section); */
     /* background-color: blue; */
 
 }
@@ -132,7 +140,63 @@ h2 {
     border: 0.5px solid #fff;
 
 }
+
+.high-primary-button {
+    background-color: #2e51ed;
+    border-color: #2e51ed;
+    color: #f6f6f7;
+    padding: var(--space-2xs) var(--space-2xs);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--border-redius-2);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
 /* nav-bar */
-.main-nav{
-    padding-block: var(--padding-inline-section);
+.main-nav {
+    padding-block: 10px;
+    justify-content: space-between;
+}
+
+.ul-flex {
+    font-weight: var(--font-weight-semibold);
+}
+
+.hover-link {
+    padding: var(--space-2xs) var(--space-2xs);
+    border: 2px solid transparent;
+    font-weight: var(--font-weight-semibold);
+}
+
+.hover-link i {
+    font-weight: 900;
+}
+
+.hover-link:hover {
+    border: 2px solid #21308A;
+    border-radius: var(--border-redius-2);
+}
+
+.serch-field input {
+    border: none;
+    background: transparent;
+}
+
+/* header section */
+.headre-section{
+    background-color: #1E2978;
+}
+.main-heading{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.first-heading{
+  max-width: 16ch;  
+  color: #fff;
+  font-family: var(--font-secondary);
 }
