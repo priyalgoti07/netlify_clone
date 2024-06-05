@@ -69,6 +69,10 @@
     --page-max-inline-size: 1200px;
     --border-redius-1: 6px;
     --border-redius-2: 5px;
+    --border-redius-3: 10px;
+    --blue-700: #2842C2;
+    --blue-800: #2036a1;
+    --blue-900: #1b205b;
 }
 
 :root {
@@ -106,7 +110,7 @@ ul {
 h1 {
     font-size: var(--step-5);
     font-weight: var(--font-weight-bold);
-   
+
 }
 
 h2 {
@@ -117,28 +121,29 @@ h2 {
 .container {
     max-width: 1200px;
     margin-inline: auto;
-    /* padding-inline: var(--padding-inline-section); */
-    /* background-color: blue; */
-
+    overflow: hidden;
 }
 
 .primary-button {
+    width: 200px;
     color: #014847;
     background-color: #32e6e2;
     padding: 7px 12px;
     font-size: var(--step-0);
     font-family: var(--font-secondary);
     border-radius: var(--border-redius-1);
+    font-weight: var(--font-weight-semibold);
 }
 
 .secondry-button {
+    width: 200px;
     color: #ffffff;
     padding: 7px 12px;
     font-size: var(--step-0);
     font-family: var(--font-secondary);
     border-radius: var(--border-redius-1);
     border: 0.5px solid #fff;
-
+    font-weight: var(--font-weight-semibold);
 }
 
 .high-primary-button {
@@ -186,17 +191,62 @@ h2 {
 }
 
 /* header section */
-.headre-section{
-    background-color: #1E2978;
+.section-background {
+    background: linear-gradient(var(--blue-900), var(--blue-700));
 }
-.main-heading{
+
+.headre-section {
+    background-image: url('assets/header.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.main-heading {
     text-align: center;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 35px;
 }
-.first-heading{
-  max-width: 16ch;  
-  color: #fff;
-  font-family: var(--font-secondary);
+
+.first-heading {
+    padding: 5.5rem 0 1rem;
+    max-width: 16ch;
+    color: #fff;
+    font-family: var(--font-secondary);
+    line-height: 1.2em;
+}
+
+.para-text {
+    max-width: 60ch;
+    color: #fff;
+    font-weight: var(--font-weight-semibold) !important;
+}
+
+.header-button {
+    gap: 25px;
+    padding: 0 0 15rem;
+}
+
+.image-section {
+    padding: 20px;
+    position: absolute;
+    /* top: 100%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 750px;
+    border-radius: var(--border-redius-3);
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-redius-3);
+    border: 0.1px solid #fff;
+
+
 }
