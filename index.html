@@ -7,6 +7,8 @@
     <title>Scale & Ship Faster with a Composable Web Architecture | Netlify</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+
 </head>
 <script src="https://kit.fontawesome.com/5191b56b5d.js" crossorigin="anonymous"></script>
 
@@ -143,19 +145,59 @@
         </div>
         <div class="container">
             <div class="inner-pancake flex">
-                <div class="first-inner">
+                <div class="left-inner flex">
                     <h2>
                         <span class="hed-one">Ship your</span>
                         <span class="hed-two" id="typed-text">AI Chatbot</span>
                         <span class="hed-thrid">in just a few clicks</span>
                     </h2>
+                    <p>
+                        Spin up a new project, or connect an existing, and explore rollbacks, CI/CD, edge functions,
+                        collaborative deploy previews, and more..
+                    </p>
+                    <div class="last-ineer flex">
+                        <a href="#" class="secondry-button">Read the docs</a>
+                        <a href="#" class="secondry-button">Devloper Hub</a>
+                    </div>
                 </div>
-                <div>
-                    <h2>Second</h2>
+                <div class="right-inner">
+                    <div class="right-one flex">
+                        <div class="right-first flex">
+                            <img src="assets/asset 29.svg" />
+                            <p>e-commerce site</p>
+                        </div>
+                        <div class="right-second flex">
+                            <p><img src="assets/asset 30.svg" alt=""></p>
+                            <p><img src="assets/asset 31.svg" alt=""></p>
+                            <p><img src="assets/asset 32.svg" alt=""></p>
+                        </div>
+                    </div>
+                    <pre class="javascript"><code>
+                            export function CartMain({layout, cart}: CartProps) {
+                                const linesCount = Boolean(cart?.lines?.r);
+                                const withDiscount =
+                                    cart &&
+                                    Boolean(cart.discountCodes.filter((code) => code.isActive).length);
+                                const className = `cart-main ${withDiscount ? 'with-discount' : ''}`;
+                                
+                                return (
+    <div className={className}>
+        <CartEmpty hidden={linesCount} layout={layout} />
+    </div>
+);
+
+                            }
+                                </code></pre>
+                    <div class="right-third flex">
+                        <a href="#" class="primary-button">Deploy to Netlify</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
 </html>
