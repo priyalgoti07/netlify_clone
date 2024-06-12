@@ -9,8 +9,17 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
 
+
+    <!-- Include Highlight.js CSS for theme -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+
+
 </head>
-<script src="https://kit.fontawesome.com/5191b56b5d.js" crossorigin="anonymous"></script>
+<!-- <script src="https://kit.fontawesome.com/5191b56b5d.js" crossorigin="anonymous"></script> -->
+<!-- Include Highlight.js library -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<!-- Initialize Highlight.js -->
+<script>hljs.highlightAll();</script>
 
 <body>
     <!-- nav-bar -->
@@ -172,22 +181,21 @@
                             <p><img src="assets/asset 32.svg" alt=""></p>
                         </div>
                     </div>
-                    <pre class="javascript"><code>
-                            export function CartMain({layout, cart}: CartProps) {
-                                const linesCount = Boolean(cart?.lines?.r);
-                                const withDiscount =
-                                    cart &&
-                                    Boolean(cart.discountCodes.filter((code) => code.isActive).length);
-                                const className = `cart-main ${withDiscount ? 'with-discount' : ''}`;
-                                
-                                return (
-    <div className={className}>
-        <CartEmpty hidden={linesCount} layout={layout} />
-    </div>
-);
+                    <pre><code class="javascript">
+export function CartMain({layout, cart}) {
+    const linesCount = Boolean(cart?.lines?.length);
+    const withDiscount = 
+        cart && Boolean(cart.discountCodes.filter((code) => code).length);
+    const className = `cart-main ${withDiscount ? 'with-discount' : ''}`;
 
-                            }
-                                </code></pre>
+    return (
+        &lt;div className={className}&gt;
+            &lt;CartEmpty hidden={linesCount} layout={layout} /&gt;
+            &lt;CartDetails  Cart={cart} layout={layout} /&gt;
+        &lt;/div&gt;
+    );
+}
+</code></pre>
                     <div class="right-third flex">
                         <a href="#" class="primary-button">Deploy to Netlify</a>
                     </div>

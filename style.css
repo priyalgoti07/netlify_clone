@@ -101,11 +101,6 @@ body {
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height);
     color: var(--primary-text-color);
-
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-
 }
 
 p {
@@ -500,14 +495,37 @@ h2 {
 }
 
 pre {
-    background-color: #272822;
     padding: 10px;
-    border: 1px solid #ddd;
+    background-color: #2e3440; /* Background color matching code editor */
+    color: #d8dee9; /* Text color matching code editor */
+    border-radius: 5px;
     overflow-x: auto;
-    color: #f8f8f2;
-    /* Text color for dark background */
 }
-
-code {
-    font-family: 'Courier New', Courier, monospace;
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #2e3440; /* Dark background */
+    color: #d8dee9; /* Light text */
+}
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link {
+    color: #81a1c1; /* Light blue */
+}
+.hljs-function, .hljs-title, .hljs-name {
+    color: #8fbcbb; /* Aqua */
+}
+.hljs-comment {
+    color: #4c566a; /* Dark grey */
+}
+.hljs-string, .hljs-attribute, .hljs-bullet, .hljs-addition {
+    color: #a3be8c; /* Green */
+}
+.hljs-number, .hljs-symbol, .hljs-meta, .hljs-selector-attr, .hljs-selector-pseudo {
+    color: #b48ead; /* Purple */
+}
+.hljs-emphasis {
+    font-style: italic;
+}
+.hljs-strong {
+    font-weight: bold;
 }
