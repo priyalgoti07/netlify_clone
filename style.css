@@ -588,16 +588,15 @@ pre {
     border-radius: 16px;
     border: 1px solid #f6f6f7;
     box-shadow: var(--shadow-light);
-    background-color: var(--blue-900);
 }
 
 .left-card {
+    background-color: var(--blue-900);
     width: 40%;
     color: var(--neutral-light-000);
     padding: var(--space-2xl) var(--space-xl);
     color: #fff;
-    border-right: 1px solid sienna;
-    /* border-radius: 16px; */
+    border-radius: 16px 0 0 16px;
 }
 
 .inner-left-card {
@@ -605,8 +604,8 @@ pre {
 }
 
 .logocard {
-    width: 135px;
-    height: 45px;
+    width: 35%;
+    height: 20%;
     object-fit: contain;
 }
 
@@ -627,4 +626,105 @@ pre {
     padding: 7px;
     top: 0;
     top: .25em;
+}
+
+.right-card {
+    width: 55%;
+    padding: var(--space-xl) var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.right-card h3 {
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-secondary);
+}
+
+.request-demo {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.request-demo h2 {
+    font-family: var(--font-secondary);
+}
+
+.request-demo a {
+    margin-top: 2rem;
+}
+
+/* Footer section */
+.footer-section {
+    margin-top: 5rem;
+    justify-content: space-between;
+}
+
+.logo-ul {
+    gap: 30px;
+}
+
+.sos-media {
+    width: 25px;
+    height: 35px
+}
+
+/* sub footer */
+.sub-footer {
+    max-width: 1000px;
+    margin-block-start: var(--space-xl, var(--space-m));
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sub-section {
+    color: #545a61;
+}
+
+.sub-section li {
+    font-size: 14px;
+    line-height: 2.5rem;
+}
+
+.second-sub-footer {
+
+    margin-block: 4rem;
+}
+
+.second-sub-footer p {
+    text-align: center;
+}
+
+.two-filed {
+    margin-left: 28.5rem;
+    margin-top: 1rem;
+}
+
+.two-filed {
+    width: fit-content;
+}
+
+.input-filed {
+    padding: 9px 12px;
+    width: 20rem;
+}
+
+.last-sub-footer {
+    border-top: 1px solid #e9ebed;
+    margin-bottom: 3rem;
+}
+
+.last-main {
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.ul-content {
+    gap: 20px;
+}
+
+.ul-content li {
+    font-size: var(--step--1);
+    color: #545a61;
 }
